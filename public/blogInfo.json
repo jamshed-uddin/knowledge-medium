@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "authorName": "Walter White",
+    "blogTitle": "How to get your first job as a self-taught programmer",
+    "coverImage": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80",
+    "authorImage": "https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?w=740&t=st=1680215665~exp=1680216265~hmac=0fee9a0779fd73e61c3bfa92c263f73a6443b7b2de151d694366b8a69612ddb0",
+    "readTime": 4,
+    "publishDate": "Feb 23"
+  },
+  {
+    "id": 2,
+    "authorName": "Natalie Armitage",
+    "blogTitle": "Roadmap to complete front end web development for beginner",
+    "coverImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
+    "authorImage": "https://images.unsplash.com/photo-1579503841516-e0bd7fca5faa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+    "readTime": 7,
+    "publishDate": "March 12"
+  },
+  {
+    "id": 3,
+    "authorName": "Saul Goodman",
+    "blogTitle": "All the things you need to know of javaScript before you create your react app",
+    "coverImage": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "authorImage": "https://img.freepik.com/free-photo/man-white_1368-3544.jpg?w=360&t=st=1680215940~exp=1680216540~hmac=504880e0478a64b9ab3b51f479d6911e65855d3178db6dfe5a21165bfbfe70e8",
+    "readTime": 9,
+    "publishDate": "July 17"
+  },
+  {
+    "id": 4,
+    "authorName": "Gus Fring",
+    "blogTitle": "Should AI development beyond GPT-4 be paused?",
+    "coverImage": "https://images.unsplash.com/photo-1593349480506-8433634cdcbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "authorImage": "https://img.freepik.com/free-photo/worldface-ugandan-man-white-background_53876-14474.jpg?w=740&t=st=1680217543~exp=1680218143~hmac=2a8b9f62b0e3214175fb55aab3c8d3f6916a85d9180d1a8a57b04a52a2a8dd7e",
+    "readTime": 6,
+    "publishDate": "August 12"
+  }
+]
