@@ -15,6 +15,11 @@ const Main = () => {
       .then((data) => setBlogs(data));
   }, []);
 
+  useEffect(() => {
+    const bookmarkedBlogs = JSON.parse(localStorage.getItem("bookmark"));
+    setBookmarks(bookmarkedBlogs);
+  }, []);
+
   const addToBookmarkHandler = ({ id, blogTitle }) => {
     const PreviousBookmark = JSON.parse(localStorage.getItem("bookmark"));
     const bookmark = [];
@@ -23,15 +28,17 @@ const Main = () => {
     if (PreviousBookmark) {
       const bookmarked = PreviousBookmark.find((blog) => blog.id == id);
       if (bookmarked) {
-        console.log("ache");
         toast("Already bookmarked !");
       } else {
         bookmark.push(...PreviousBookmark, blogInfo);
         localStorage.setItem("bookmark", JSON.stringify(bookmark));
+
+        setBookmarks(bookmark);
       }
     } else {
       bookmark.push(blogInfo);
       localStorage.setItem("bookmark", JSON.stringify(bookmark));
+      setBookmarks(bookmark);
     }
   };
 
