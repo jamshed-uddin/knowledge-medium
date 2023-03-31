@@ -14,11 +14,8 @@ const Blog = (props) => {
   } = props.blog;
 
   const addToBookmarkHandler = props.addToBookmarkHandler;
+  const markAsReadHandler = props.markAsReadHandler;
   // console.log(authorImage);
-
-  const markAsReadHandler = () => {
-    console.log("read btn cki");
-  };
 
   return (
     <div className="my-2 shadow-xl p-4 rounded-lg">
@@ -53,7 +50,7 @@ const Blog = (props) => {
       </div>
       <div>
         <button
-          onClick={markAsReadHandler}
+          onClick={() => markAsReadHandler(id)}
           className="text-blue-700 hover:text-black font-semibold underline"
         >
           Mark as read
