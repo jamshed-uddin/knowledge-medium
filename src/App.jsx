@@ -10,7 +10,7 @@ import Main from "./components/Main/Main";
 function App() {
   return (
     <div className="App">
-      <div className="w-3/4 m-auto">
+      <div className="lg:w-3/4 m-auto">
         <Header></Header>
         <Main></Main>
         <ToastContainer></ToastContainer>

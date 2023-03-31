@@ -13,7 +13,7 @@ const Bookmarks = (props) => {
     <div className="md:sticky top-20">
       <div className="bg-blue-200 border-2 border-blue-700 rounded-lg py-3">
         <div className="text-blue-700 text-center text-lg font-semibold">
-          Spend time on read: {readTime} min
+          Spent time on read: {readTime} min
         </div>
       </div>
       <div className="px-3 py-1 mt-2 border-b-2 border-blue-700 bg-white font-semibold flex justify-between items-center">

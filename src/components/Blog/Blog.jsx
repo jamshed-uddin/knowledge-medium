@@ -33,7 +33,7 @@ const Blog = (props) => {
           </div>
         </div>
         <div>
-          {readTime} minute read{" "}
+          {readTime} minutes read{" "}
           <span
             onClick={() => addToBookmarkHandler(props.blog)}
             className="cursor-pointer text-xl px-3"

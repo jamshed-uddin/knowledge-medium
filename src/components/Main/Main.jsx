@@ -3,6 +3,7 @@ import Blog from "../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Questions from "../Questions/Questions";
 
 const Main = () => {
   const [blogs, setBlogs] = useState([]);
@@ -59,23 +60,29 @@ const Main = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-3">
-      <div className="col-span-3 md:col-span-2">
-        {blogs.map((blog) => (
-          <Blog
-            key={blog.id}
-            blog={blog}
-            addToBookmarkHandler={addToBookmarkHandler}
-            markAsReadHandler={markAsReadHandler}
-          ></Blog>
-        ))}
+    <div className="p-4 md:p-0">
+      <div className="grid grid-cols-3 gap-3">
+        <div className="col-span-3 md:col-span-2">
+          {blogs.map((blog) => (
+            <Blog
+              key={blog.id}
+              blog={blog}
+              addToBookmarkHandler={addToBookmarkHandler}
+              markAsReadHandler={markAsReadHandler}
+            ></Blog>
+          ))}
+        </div>
+        <div className="col-span-3 md:col-span-1 bg-slate-100 rounded-lg my-2 p-3">
+          <Bookmark
+            bookmarks={bookmarks}
+            readTime={readTime}
+            clearBookmarkHandler={clearBookmarkHandler}
+          ></Bookmark>
+        </div>
       </div>
-      <div className="col-span-3 md:col-span-1 bg-slate-100 rounded-lg my-2 p-3">
-        <Bookmark
-          bookmarks={bookmarks}
-          readTime={readTime}
-          clearBookmarkHandler={clearBookmarkHandler}
-        ></Bookmark>
+
+      <div className="my-4">
+        <Questions></Questions>
       </div>
     </div>
   );
