@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Blog from "../Blog/Blog";
+import Bookmarks from "../Bookmarks/Bookmarks";
 
 const Main = () => {
   const [blogs, setBlogs] = useState([]);
@@ -16,7 +17,9 @@ const Main = () => {
           <Blog blog={blog}></Blog>
         ))}
       </div>
-      <div className="col-span-3 md:col-span-1 bg-slate-100 rounded-lg my-2 p-3"></div>
+      <div className="col-span-3 md:col-span-1 bg-slate-100 rounded-lg my-2 p-3">
+        <Bookmarks></Bookmarks>
+      </div>
     </div>
   );
 };
