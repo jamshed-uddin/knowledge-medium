@@ -17,7 +17,7 @@ const Blog = (props) => {
   // console.log(authorImage);
 
   return (
-    <div className="my-2">
+    <div className="my-2 shadow-xl p-4 rounded-lg">
       <div>
         <img className=" rounded-lg" src={coverImage} alt="" />
       </div>
@@ -48,10 +48,7 @@ const Blog = (props) => {
         <p>#beginner #programming</p>
       </div>
       <div>
-        <button
-          onClick={markAsReadHandler}
-          className="text-blue-700 hover:text-black font-semibold underline"
-        >
+        <button className="text-blue-700 hover:text-black font-semibold underline">
           Mark as read
         </button>
       </div>
