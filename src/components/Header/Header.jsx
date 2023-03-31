@@ -3,7 +3,7 @@ import profilePicture from "./../../image/profileImg.jpg";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center py-4 border-b-2 bg-white z-10 sticky top-0 ">
+    <div className="flex justify-between items-center py-4 px-2 border-b-2 bg-white z-10 sticky top-0 ">
       <div>
         <h1 className="text-3xl font-bold">Knowledge Medium</h1>
       </div>

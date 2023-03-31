@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Blog from "../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
-
 import { ToastContainer, toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
 
 const Main = () => {
@@ -22,6 +20,7 @@ const Main = () => {
     setBookmarks(bookmarkedBlogs);
   }, []);
 
+  // add to bookmark button
   const addToBookmarkHandler = ({ id, blogTitle, readTime }) => {
     const PreviousBookmark = JSON.parse(localStorage.getItem("bookmark"));
     const bookmark = [];
@@ -44,10 +43,19 @@ const Main = () => {
     }
   };
 
+  // mark as read button
   const markAsReadHandler = (id) => {
     const blogIndividual = blogs.find((blog) => blog.id === id);
 
     setReadTime(readTime + blogIndividual.readTime);
+  };
+
+  // clear bookmark button
+  const clearBookmarkHandler = () => {
+    console.log("delete bookmark btn clicked");
+    const bookmark = [];
+    localStorage.setItem("bookmark", JSON.stringify(bookmark));
+    setBookmarks(bookmark);
   };
 
   return (
@@ -63,7 +71,11 @@ const Main = () => {
         ))}
       </div>
       <div className="col-span-3 md:col-span-1 bg-slate-100 rounded-lg my-2 p-3">
-        <Bookmark bookmarks={bookmarks} readTime={readTime}></Bookmark>
+        <Bookmark
+          bookmarks={bookmarks}
+          readTime={readTime}
+          clearBookmarkHandler={clearBookmarkHandler}
+        ></Bookmark>
       </div>
     </div>
   );
