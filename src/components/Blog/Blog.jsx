@@ -12,7 +12,10 @@ const Blog = (props) => {
     readTime,
     publishDate,
   } = props.blog;
-  console.log(authorImage);
+
+  const addToBookmarkHandler = props.addToBookmarkHandler;
+  // console.log(authorImage);
+
   return (
     <div className="my-2">
       <div>
@@ -30,7 +33,10 @@ const Blog = (props) => {
         </div>
         <div>
           {readTime} minute read{" "}
-          <span className="cursor-pointer text-xl px-3">
+          <span
+            onClick={() => addToBookmarkHandler(props.blog)}
+            className="cursor-pointer text-xl px-3"
+          >
             <FontAwesomeIcon icon={faBookmark} />
           </span>
         </div>
@@ -42,7 +48,10 @@ const Blog = (props) => {
         <p>#beginner #programming</p>
       </div>
       <div>
-        <button className="text-blue-700 hover:text-black font-semibold underline">
+        <button
+          onClick={markAsReadHandler}
+          className="text-blue-700 hover:text-black font-semibold underline"
+        >
           Mark as read
         </button>
       </div>
